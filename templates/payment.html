@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/08ce7ad8dc.js" crossorigin="anonymous"/>
+<link rel="stylesheet" href="css/style-pay.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="title">
+            <h4>Выберите способ <span style="color: #6064b6">оплаты</span>.</h4>
+        </div>
+    
+        <form action="#">
+            <input type="radio" name="payment" id="visa">
+            <input type="radio" name="payment" id="mastercard">
+            <input type="radio" name="payment" id="paypal">
+            <input type="radio" name="payment" id="AMEX">
+    
+    
+            <div class="category">
+                <label for="visa" class="visaMethod">
+                    <div class="imgName">
+                        <div class="imgContainer visa">
+                            <img src="https://distantprof.ru/pluginfile.php/35/course/summary/financing-min.jpg" alt="">
+                        </div>
+                        <span class="name">Картой</span>
+                    </div>
+                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+                </label>
+    
+                <label for="mastercard" class="mastercardMethod">
+                    <div class="imgName">
+                        <div class="imgContainer mastercard">
+                            <img src="https://avatars.mds.yandex.net/i?id=7495cc4d357e82606571731d12f9b406e04451c3-8087945-images-thumbs&n=13" alt="">
+                        </div>
+                        <span class="name">Наличными</span>
+                    </div>
+                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+                </label>
+    
+                <label for="paypal" class="paypalMethod">
+                    <div class="imgName">
+                        <div class="imgContainer paypal">
+                            <img src="https://o-re.com/upload/medialibrary/fe4/u7u02ejwxbd06upl0yjl229m5eeknr59.png" alt="">
+                        </div>
+                        <span class="name">СБП</span>
+                    </div>
+                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+                </label>
+    
+                <label for="AMEX" class="amexMethod">
+                    <div class="imgName">
+                        <div class="imgContainer AMEX">
+                            <img src="https://sar-yuvelir.ru/image/cache/catalog/yad-1000x630.jpg" alt="">
+                        </div>
+                        <span class="name">Яндекс деньги</span>
+                    </div>
+                    <span class="check"><i class="fa-solid fa-circle-check" style="color: #6064b6;"></i></span>
+                </label>
+            </div>
+        </form>
+    </div>
+    <div id="cardModal" class="modal">
+    <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Введите данные карты</h2>
+        <input type="text" placeholder="0000 0000 0000 0000">
+        <input type="text" placeholder="00/00">
+        <input type="text" placeholder="CVV/CVC">
+        <button id="payButton">Оплатить</button>
+    </div>
+</div>
+<script src="js/script-pay.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/styles-dtp.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="datetime-form">
+  <form action="/submit-your-form" id="datetime-form">
+    <div class="form-item">
+      <label for="date">Выберите дату:</label>
+      <input type="date" id="date" name="date">
+    </div>
+    <div class="form-item">
+      <label for="time">Выберите время:</label>
+      <select id="time" name="time">
+        <option value="11:00">11:00</option>
+        <option value="12:00">12:00</option>
+        <option value="13:00">13:00</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <option value="18:00">18:00</option>
+        <option value="19:00">19:00</option>
+      </select>
+    </div>
+    <div class="form-item">
+      <button type="submit">Отправить</button>
+    </div>
+  </form>
+</div>
+
+<div id="modal-wrong-year" class="modal">
+  <div class="modal-content">
+    <span class="close">x</span>
+    <p>Выбран некорректный год, выберите текущий год.</p>
+  </div>
+</div>
+
+<div id="modal-time-free" class="modal">
+  <div class="modal-content">
+    <span class="close">x</span>
+    <p>Время свободно, перейти к оплате?</p>
+    <a id="go-to-payment" href="payment.html" type="button">К оплате</a>
+  </div>
+</div>
+
+<div id="modal-time-busy" class="modal">
+  <div class="modal-content">
+    <span class="close">x</span>
+    <p>Время занято, выберите другое.</p>
+  </div>
+</div>
+
+<script src="js/script-dtp.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основные стили */
+html {
+  font-size: 16px; /* Базовый размер шрифта для десктопов */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #333; /* Чуть темнее фон всей страницы */
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px; /* Добавляем небольшой отступ */
+
+}
+
+/* Стилизация формы */
+.datetime-form {
+  width: 90%; /* Увеличиваем ширину формы на ПК */
+  max-width: 500px; /* Устанавливаем максимальную ширину для ПК */
+  background-color: #4c4c4c; /* Фон календаря */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Стилизация элементов формы */
+.datetime-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.datetime-form input[type="date"],
+.datetime-form input[type="time"] {
+  width: 100%;
+  padding: 15px; /* Увеличиваем внутренние отступы */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem; /* Устанавливаем базовый размер шрифта */
+}
+
+/* Стилизация кнопки отправки */
+.datetime-form button {
+  width: 100%;
+  padding: 15px; /* Увеличиваем внутренние отступы */
+  border: none;
+  background-color: yellow;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem; /* Устанавливаем базовый размер шрифта */
+}
+
+.datetime-form button:hover {
+  background-color: yellow;
+  transition: 0.5s;
+  transform: scale(1.08);
+}
+/* Стилизация выпадающего списка */
+.datetime-form select {
+  width: 100%; /* Занимает всю ширину контейнера */
+  padding: 15px; /* Внутренние отступы для удобства */
+  margin-bottom: 20px; /* Отступ снизу */
+  border: 1px solid #ddd; /* Граница аналогично другим элементам формы */
+  border-radius: 4px; /* Скругление углов */
+  background-color: #fff; /* Белый фон */
+  color: #333; /* Цвет текста */
+  font-size: 1rem; /* Размер шрифта */
+}
+
+/* Стилизация стрелки выпадающего списка */
+.datetime-form select {
+  -webkit-appearance: none; /* Убираем стандартный вид в Chrome и Safari */
+  -moz-appearance: none; /* Убираем стандартный вид в Firefox */
+  appearance: none; /* Убираем стандартный вид */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Иконка стрелки */
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%; /* Позиция иконки стрелки */
+  background-size: 12px; /* Размер иконки стрелки */
+}
+
+/* Стилизация выпадающего списка при наведении */
+.datetime-form select:hover {
+  border-color: #bbb; /* Светлее цвет границы */
+}
+
+/* Стилизация выпадающего списка при фокусе */
+.datetime-form select:focus {
+  outline: none; /* Убираем стандартный outline */
+  border-color: #5cb85c; /* Цвет границы при фокусе */
+}
+.modal {
+  display: none; /* Изначально окна скрыты */
+  position: fixed; /* Фиксированное позиционирование */
+  z-index: 1; /* Положение на верхнем уровне */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку, если необходимо */
+  background-color: rgb(0,0,0); /* Черный фон с прозрачностью */
+  background-color: rgba(0,0,0,0.4); /* Также добавляем прозрачность */
+  color: black;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% от верхнего края и центрировано */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ширина модального окна */
+  border-radius: 10px; /* Закругленные углы */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#go-to-payment {
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#go-to-payment:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  /* Уменьшаем размер шрифта для элементов формы */
+  .datetime-form input[type="date"],
+  .datetime-form input[type="time"],
+  .datetime-form select {
+    font-size: 1.25rem; /* Новый размер шрифта */
+    padding: 10px; /* Новые внутренние отступы */
+  }
+
+  /* Уменьшаем размер шрифта и внутренние отступы для кнопки */
+  .datetime-form button {
+    font-size: 1.25rem; /* Новый размер шрифта для кнопки */
+    padding: 10px; /* Новые внутренние отступы */
+  }
+}

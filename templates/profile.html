@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-profile.css">
+    <title>Ваши записи</title>
+</head>
+<body>
+    <section id="header">
+        <div class="header container">
+          <div class="nav-bar">
+            <div class="brand">
+              <a href="#hero">
+                <h1><span>С</span>алон красоты <span>S</span>oda</h1>
+              </a>
+            </div>
+            <div class="nav-list">
+              <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+              <ul>
+                <li><a href="#Masters" data-after="Masters">Мастера</a></li>
+                <li><a href="#fot" data-after="About">О нас</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    <div class="record-container">
+        <div class="record-card">
+            <div class="record-details">
+              {{%for row in my_database_master}}
+              <h1>
+                {row[0]}
+              </h1>
+              {{%endfor%}}
+              {{%for row in my_database_order%}}
+              <ul>
+                <li>{row[0]}</li>
+                <li>{row[1]}</li>
+              {{%endfor%}}
+              </ul>
+            </div>  
+        </div>
+    </div>
+    <script src="js/script-profile.js"></script>
+</body>
+</html>
